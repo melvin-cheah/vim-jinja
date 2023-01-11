@@ -1,7 +1,15 @@
+# Fork for Jinja for Vim
+
+@melvin-cheah fork for:
+* Figure out file type from extension, e.g. an HTML template is *.jinja.html
+  * Using output file type at end means other text editors will syntax highlight most of the code correctly
+* Support all fileypes (as long as there is already syntax highlighting for that filetype)
+
+Original README below, edited with reference to this fork where needed
+
 # Jinja for Vim
 
 Jinja bundle for vim.
-
 
 ## Feature
 
@@ -15,7 +23,7 @@ Jinja bundle for vim.
 If you are not using vundle, you really should have a try.
 Edit your vimrc:
 
-    Bundle "lepture/vim-jinja"
+    Bundle "melvin-cheah/vim-jinja"
 
 And install it:
 
@@ -28,7 +36,7 @@ And install it:
 If you prefer tpope's pathogen, that's ok. Just clone it:
 
     cd ~/.vim/bundle
-    git clone https://github.com/lepture/vim-jinja.git
+    git clone https://github.com/melvin-cheah/vim-jinja.git
 
 
 ## Configuration
@@ -45,5 +53,11 @@ au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm set ft=jinja
 
 ## Bug report
 
+For the original repo:
+
 Report a bug on [GitHub Issues](https://github.com/lepture/vim-jinja/issues).
+
+For this fork:
+
+Report a bug on [GitHub Issues](https://github.com/melvin-cheah/vim-jinja/issues).
 
