@@ -12,3 +12,5 @@ fun! s:SelectHTML()
 endfun
 autocmd BufNewFile,BufRead *.html,*.htm call s:SelectHTML()
 autocmd BufNewFile,BufRead *.jinja2,*.j2,*.jinja,*.nunjucks,*.nunjs,*.njk set ft=jinja
+" Support *.jinja.<filetype> extension style
+autocmd BufNewFile,BufRead *.jinja2.*,*.j2.*,*.jinja.*,*.nunjucks.*,*.nunjs.*,*.njk.* set ft=jinja
