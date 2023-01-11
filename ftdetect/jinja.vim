@@ -12,5 +12,15 @@ fun! s:SelectHTML()
 endfun
 autocmd BufNewFile,BufRead *.html,*.htm call s:SelectHTML()
 autocmd BufNewFile,BufRead *.jinja2,*.j2,*.jinja,*.nunjucks,*.nunjs,*.njk set ft=jinja
+
 " Support *.jinja.<filetype> extension style
-autocmd BufNewFile,BufRead *.jinja2.*,*.j2.*,*.jinja.*,*.nunjucks.*,*.nunjs.*,*.njk.* set ft=jinja
+" Use <filetype> as the other filetype, too
+
+fun! s:SelectJinjaMainFiletype()
+  " Set only to jinja (instead of <filetype>.jinja, and allow syntax/jinja.vim
+  " to source the right syntax/<filetype>.vim file
+  set ft=jinja
+  let b:jinjaOutputFiletype=expand('%:e')
+endfun
+
+autocmd BufNewFile,BufRead *.jinja2.*,*.j2.*,*.jinja.*,*.nunjucks.*,*.nunjs.*,*.njk.* call s:SelectJinjaMainFiletype()

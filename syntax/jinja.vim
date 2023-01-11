@@ -10,10 +10,10 @@ if exists("b:current_syntax")
 endif
 
 if !exists("main_syntax")
-  let main_syntax = 'html'
+  let main_syntax = expand('%:e')
 endif
 
-runtime! syntax/html.vim
+exe "runtime! syntax/" . main_syntax . ".vim"
 unlet b:current_syntax
 
 syntax case match
