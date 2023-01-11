@@ -3,7 +3,8 @@
 @melvin-cheah fork for:
 * Figure out file type from extension, e.g. an HTML template is *.jinja.html
   * Using output file type at end means other text editors will syntax highlight most of the code correctly
-* Support all fileypes (as long as there is already syntax highlighting for that filetype)
+* Highlight jinja code
+* Support all fileypes automatically (as long as there is already syntax highlighting for that filetype)
 
 Original README below, edited with reference to this fork where needed
 
