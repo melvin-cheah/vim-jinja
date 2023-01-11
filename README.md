@@ -1,6 +1,6 @@
 # Fork for Jinja for Vim
 
-(@melvin-cheah)[https://github.com/melvin-cheah] fork for:
+[@melvin-cheah](https://github.com/melvin-cheah) fork for:
 * Figure out file type from extension, e.g. an HTML template is *.jinja.html
   * Using output file type at end means other text editors will syntax highlight most of the code correctly
 * Highlight jinja code
