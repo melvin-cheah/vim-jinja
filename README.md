@@ -1,9 +1,9 @@
 # Fork for [Jinja for Vim](https://github.com/lepture/vim-jinja)
 
 [@melvin-cheah](https://github.com/melvin-cheah) fork for:
-* Figure out file type from extension, e.g. an HTML template is *.jinja.html
-  * Using output file type at end means other text editors will syntax highlight most of the code correctly
-* Highlight jinja code
+* Background colour change on jinja code (set b:jinja_bg_color)
+* Figure out file type from extension, e.g. an HTML template is *.jinja.html, and a SystemVerilog template is *.jinja.sv
+  * Using output file type at end means other text editors will syntax highlight most of the code as usual
 * Support all fileypes automatically (as long as there is already syntax highlighting for that filetype)
 
 # Jinja for Vim
