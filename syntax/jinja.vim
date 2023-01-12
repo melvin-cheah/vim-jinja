@@ -5,6 +5,10 @@
 
 " only support 6.x+
 
+if !exists("b:bg_color")
+  let b:bg_color = 17
+endif
+
 if exists("b:current_syntax")
   finish
 endif
@@ -69,18 +73,28 @@ syn region jinjaVarBlock start="{{" end="}}" contains=jinjaFilter,jinjaArgument,
 syn region jinjaComBlock start="{#" end="#}" contains=jinjaTodo containedin=ALLBUT,@jinjaBlocks
 
 
-hi def link jinjaTagBlock PreProc
-hi def link jinjaVarBlock PreProc
-hi def link jinjaStatement Statement
-hi def link jinjaFunction Function
-hi def link jinjaTest Type
-hi def link jinjaFilter Identifier
-hi def link jinjaArgument Constant
-hi def link jinjaTagError Error
-hi def link jinjaVarError Error
-hi def link jinjaError Error
-hi def link jinjaComment Comment
-hi def link jinjaComBlock Comment
-hi def link jinjaTodo Todo
+" Link all items/regions/matches to corresponding type and
+" change BG colour for all Jinja code
+" Need to explicitly reset ctermfg to its current value, so use a function
+function HiLinkAndChangeBg(item, corresponding_type)
+  exe "hi def link " . a:item . " " . a:corresponding_type
+  let fg_color=synIDattr(synIDtrans(hlID(a:item)), 'fg')
+  exe "hi " . a:item . "  ctermfg=" . fg_color . " ctermbg=" . b:bg_color
+endfun
+
+call HiLinkAndChangeBg("jinjaTagBlock",   "PreProc") 
+call HiLinkAndChangeBg("jinjaVarBlock",   "PreProc") 
+call HiLinkAndChangeBg("jinjaStatement",  "Statement") 
+call HiLinkAndChangeBg("jinjaFunction",   "Function") 
+call HiLinkAndChangeBg("jinjaTest",       "Type") 
+call HiLinkAndChangeBg("jinjaFilter",     "Identifier") 
+call HiLinkAndChangeBg("jinjaArgument",   "Constant") 
+call HiLinkAndChangeBg("jinjaTagError",   "Error") 
+call HiLinkAndChangeBg("jinjaVarError",   "Error") 
+call HiLinkAndChangeBg("jinjaError",      "Error") 
+call HiLinkAndChangeBg("jinjaComment",    "Comment") 
+call HiLinkAndChangeBg("jinjaComBlock",   "Comment") 
+call HiLinkAndChangeBg("jinjaTodo",       "Todo") 
+
 
 let b:current_syntax = "jinja"
