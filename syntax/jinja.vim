@@ -4,8 +4,8 @@
 
 " only support 6.x+
 
-if !exists("b:bg_color")
-  let b:bg_color = 17
+if !exists("b:jinja_bg_color")
+  let b:jinja_bg_color = 17
 endif
 
 if exists("b:current_syntax")
@@ -78,7 +78,7 @@ syn region jinjaComBlock start="{#" end="#}" contains=jinjaTodo containedin=ALLB
 function HiLinkAndChangeBg(item, corresponding_type)
   exe "hi def link " . a:item . " " . a:corresponding_type
   let fg_color=synIDattr(synIDtrans(hlID(a:item)), 'fg')
-  exe "hi " . a:item . "  ctermfg=" . fg_color . " ctermbg=" . b:bg_color
+  exe "hi " . a:item . "  ctermfg=" . fg_color . " ctermbg=" . b:jinja_bg_color
 endfun
 
 call HiLinkAndChangeBg("jinjaTagBlock",   "PreProc") 
