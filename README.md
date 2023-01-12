@@ -1,4 +1,4 @@
-# Fork for [https://github.com/lepture/vim-jinja](Jinja for Vim)
+# Fork for [Jinja for Vim](https://github.com/lepture/vim-jinja)
 
 [@melvin-cheah](https://github.com/melvin-cheah) fork for:
 * Figure out file type from extension, e.g. an HTML template is *.jinja.html
@@ -8,9 +8,9 @@
 
 # Jinja for Vim
 
-See [https://github.com/lepture/vim-jinja](Jinja for Vim original project's) README for full info.
+See [Jinja for Vim original project's](https://github.com/lepture/vim-jinja) README for full info.
 
-[https://github.com/lepture/vim-jinja](Jinja for Vim) provides syntax highlighting and some indent support.
+[Jinja for Vim](https://github.com/lepture/vim-jinja) provides syntax highlighting and some indent support.
 
 # Installation
 
