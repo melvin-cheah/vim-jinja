@@ -1,7 +1,6 @@
 " jinja syntax file
 " Language: Jinja HTML template
-" Maintainer: Hsiaoming Yang <lepture@me.com>
-" Last Change: Sep 13, 2012
+" Original author: Hsiaoming Yang <lepture@me.com>
 
 " only support 6.x+
 
