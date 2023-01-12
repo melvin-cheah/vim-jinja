@@ -1,4 +1,4 @@
-# Fork for Jinja for Vim
+# Fork for [https://github.com/lepture/vim-jinja](Jinja for Vim)
 
 [@melvin-cheah](https://github.com/melvin-cheah) fork for:
 * Figure out file type from extension, e.g. an HTML template is *.jinja.html
@@ -6,59 +6,36 @@
 * Highlight jinja code
 * Support all fileypes automatically (as long as there is already syntax highlighting for that filetype)
 
-Original README below, edited with reference to this fork where needed
-
 # Jinja for Vim
 
-Jinja bundle for vim.
+See [https://github.com/lepture/vim-jinja](Jinja for Vim original project's) README for full info.
 
-## Feature
+[https://github.com/lepture/vim-jinja](Jinja for Vim) provides syntax highlighting and some indent support.
 
-1. full syntax support
-2. great indent support
+# Installation
 
-## Installation
+## Install with [Vundle](https://github.com/gmarik/vundle)
 
-### Install with [Vundle](https://github.com/gmarik/vundle)
-
-If you are not using vundle, you really should have a try.
-Edit your vimrc:
-
-    Bundle "melvin-cheah/vim-jinja"
+    Plugin "melvin-cheah/vim-jinja"
 
 And install it:
 
     :so ~/.vimrc
-    :BundleInstall
+    :PluginInstall
 
-
-### Install with [pathogen](https://github.com/tpope/vim-pathogen)
-
-If you prefer tpope's pathogen, that's ok. Just clone it:
+## Install with [pathogen](https://github.com/tpope/vim-pathogen)
 
     cd ~/.vim/bundle
     git clone https://github.com/melvin-cheah/vim-jinja.git
 
 
-## Configuration
+# Bug report
 
-No configuration is needed, if you are using vim 7.2+, it will detect if
-a html file is a jinja template.
-
-But if you want to ensure it works well, you can edit your vimrc:
-
-```vim
-au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm set ft=jinja
-```
-
-
-## Bug report
-
-For the original repo:
+## Original repo
 
 Report a bug on [GitHub Issues](https://github.com/lepture/vim-jinja/issues).
 
-For this fork:
+## This fork
 
 Report a bug on [GitHub Issues](https://github.com/melvin-cheah/vim-jinja/issues).
 
