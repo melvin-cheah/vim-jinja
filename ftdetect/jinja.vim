@@ -1,4 +1,4 @@
-" Figure out which type of hilighting to use for html.
+" Figure out which type of highlighting to use for html.
 fun! s:SelectHTML()
   let n = 1
   while n < 50 && n <= line("$")
@@ -14,7 +14,8 @@ autocmd BufNewFile,BufRead *.html,*.htm call s:SelectHTML()
 autocmd BufNewFile,BufRead *.jinja2,*.j2,*.jinja,*.nunjucks,*.nunjs,*.njk set ft=jinja
 
 " Support *.jinja.<filetype> extension style
-" Use <filetype> as the other filetype, too
+" Use <filetype> as the main_syntax
+" This allows any text editor to syntax highlight non-jinja bits still
 
 fun! s:SelectJinjaMainFiletype()
   " Set only to jinja (instead of <filetype>.jinja, and allow syntax/jinja.vim
